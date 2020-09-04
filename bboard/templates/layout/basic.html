@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'bboard/style.css' %}">
+<title>{% block title %}Главная{% endblock %} Доска объявлений</title>
+</head>
+<body>
+<header>
+<h1>Объявления</h1>
+</header>
+<nav>
+    <a href="{% url 'index' %}">General</a>
+    <a href="{% url 'add' %}">Add</a>
+    {% for rubric in rubrics %}
+        <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
+    {% endfor %}
+    <!-- Current time  -->
+    <!-- <input type=button value="Show Time" onclick="alert(new Date())"> -->
+    <!-- <script type="text/javascript">
+        document.write(Date());
+    </script> -->
+</nav>
+<section>
+{% block content %}
+{% endblock %}
+</section> 
+</body>
+</html>

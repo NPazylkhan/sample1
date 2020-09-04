@@ -1,0 +1,28 @@
+body{
+    background: url("./bg.jpg")  no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    /* background-size: 100%; Современные браузеры */
+}
+header h1{
+    font-size: 40pt;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background: url("./bg.jpg") left / auto 100% no-repeat;
+}
+nav{
+    font-size: 16pt;
+    width: 150px;
+    float: left;
+}
+nav a {
+    /* color:white; */
+    display: block;
+    margin: 10px 0px;
+}
+section{
+    margin-left: 170px;
+    color:white;
+}
